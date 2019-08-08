@@ -1,6 +1,8 @@
 # FundTracking
 Утилита для отслеживания средств и инвестиций. Написать что-то свое бывает интереснее. Буду временами дорабатывать и использовать для личной "бухгалтерии".
 
+![screenshot](http://sagleft.ru/projects/fund_tracking/screen.png)
+
 ## Скачать готовую сборку
 
 Релизы доступны [здесь](https://github.com/Sagleft/FundTracking/releases)
