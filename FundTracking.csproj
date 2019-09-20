@@ -61,6 +61,15 @@
     <Compile Include="Data\EnumExtenders.cs" />
     <Compile Include="Data\FileSystemProvider.cs" />
     <Compile Include="Data\Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\SortObjects.cs" />
+    <Compile Include="View\BalanceHistoryForm.cs" />
+    <Compile Include="View\BalanceHistoryForm.Designer.cs">
+      <DependentUpon>BalanceHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CalcForm.cs" />
+    <Compile Include="View\CalcForm.Designer.cs">
+      <DependentUpon>CalcForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EntryForm.cs" />
     <Compile Include="View\EntryForm.Designer.cs">
       <DependentUpon>EntryForm.cs</DependentUpon>
@@ -68,6 +77,10 @@
     <Compile Include="View\MainForm.cs" />
     <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.Designer1.cs">
+      <DependentUpon>MainForm.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="View\UpdateBalanceForm.cs" />
     <Compile Include="View\UpdateBalanceForm.Designer.cs">
@@ -78,11 +91,19 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="View\BalanceHistoryForm.resx">
+      <DependentUpon>BalanceHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CalcForm.resx">
+      <DependentUpon>CalcForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\EntryForm.resx">
       <DependentUpon>EntryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainForm.Designer1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UpdateBalanceForm.resx">
       <DependentUpon>UpdateBalanceForm.cs</DependentUpon>

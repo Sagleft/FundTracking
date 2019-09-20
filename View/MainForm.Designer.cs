@@ -43,14 +43,18 @@ namespace FundTracking
 			this.button2 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.entry_deadlineInfo = new System.Windows.Forms.Label();
+			this.entry_needAmount = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			this.entry_commentBox = new System.Windows.Forms.RichTextBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.button7 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnCalc = new System.Windows.Forms.Button();
+			this.btnArchivate = new System.Windows.Forms.Button();
+			this.btnSumMinus = new System.Windows.Forms.Button();
+			this.btnEdit = new System.Windows.Forms.Button();
+			this.btnEntryHistory = new System.Windows.Forms.Button();
+			this.btnSumPlus = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.btnCreate = new System.Windows.Forms.Button();
@@ -58,12 +62,14 @@ namespace FundTracking
 			this.tab_allEntrys = new System.Windows.Forms.TabPage();
 			this.DGV_allEntrys = new System.Windows.Forms.DataGridView();
 			this.tab_payments = new System.Windows.Forms.TabPage();
-			this.tab_targets = new System.Windows.Forms.TabPage();
-			this.tab_investments = new System.Windows.Forms.TabPage();
-			this.dataView_main = new System.Data.DataView();
 			this.label1 = new System.Windows.Forms.Label();
+			this.tab_targets = new System.Windows.Forms.TabPage();
 			this.label2 = new System.Windows.Forms.Label();
+			this.tab_investments = new System.Windows.Forms.TabPage();
 			this.label3 = new System.Windows.Forms.Label();
+			this.tab_archive = new System.Windows.Forms.TabPage();
+			this.label6 = new System.Windows.Forms.Label();
+			this.dataView_main = new System.Data.DataView();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -75,6 +81,7 @@ namespace FundTracking
 			this.tab_payments.SuspendLayout();
 			this.tab_targets.SuspendLayout();
 			this.tab_investments.SuspendLayout();
+			this.tab_archive.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataView_main)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -153,6 +160,10 @@ namespace FundTracking
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.entry_deadlineInfo);
+			this.groupBox3.Controls.Add(this.entry_needAmount);
+			this.groupBox3.Controls.Add(this.label5);
+			this.groupBox3.Controls.Add(this.label4);
 			this.groupBox3.Controls.Add(this.entry_commentBox);
 			this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.groupBox3.ForeColor = System.Drawing.Color.White;
@@ -163,25 +174,61 @@ namespace FundTracking
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Детали";
 			// 
+			// entry_deadlineInfo
+			// 
+			this.entry_deadlineInfo.Location = new System.Drawing.Point(20, 116);
+			this.entry_deadlineInfo.Name = "entry_deadlineInfo";
+			this.entry_deadlineInfo.Size = new System.Drawing.Size(250, 30);
+			this.entry_deadlineInfo.TabIndex = 2;
+			this.entry_deadlineInfo.Text = "-";
+			this.entry_deadlineInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// entry_needAmount
+			// 
+			this.entry_needAmount.Location = new System.Drawing.Point(20, 64);
+			this.entry_needAmount.Name = "entry_needAmount";
+			this.entry_needAmount.Size = new System.Drawing.Size(250, 23);
+			this.entry_needAmount.TabIndex = 2;
+			this.entry_needAmount.Text = "-";
+			this.entry_needAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// label5
+			// 
+			this.label5.Location = new System.Drawing.Point(20, 87);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(250, 29);
+			this.label5.TabIndex = 1;
+			this.label5.Text = "Deadline";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label4
+			// 
+			this.label4.Location = new System.Drawing.Point(20, 35);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(250, 29);
+			this.label4.TabIndex = 1;
+			this.label4.Text = "Требуемая сумма";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// entry_commentBox
 			// 
 			this.entry_commentBox.BackColor = System.Drawing.Color.SlateGray;
 			this.entry_commentBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.entry_commentBox.ForeColor = System.Drawing.Color.White;
-			this.entry_commentBox.Location = new System.Drawing.Point(20, 38);
+			this.entry_commentBox.Location = new System.Drawing.Point(20, 149);
 			this.entry_commentBox.Name = "entry_commentBox";
-			this.entry_commentBox.Size = new System.Drawing.Size(250, 176);
+			this.entry_commentBox.Size = new System.Drawing.Size(250, 65);
 			this.entry_commentBox.TabIndex = 0;
-			this.entry_commentBox.Text = "Нет данных";
+			this.entry_commentBox.Text = "Нет комментария";
 			// 
 			// groupBox2
 			// 
-			this.groupBox2.Controls.Add(this.button7);
-			this.groupBox2.Controls.Add(this.button4);
-			this.groupBox2.Controls.Add(this.button3);
-			this.groupBox2.Controls.Add(this.button6);
-			this.groupBox2.Controls.Add(this.button5);
-			this.groupBox2.Controls.Add(this.button1);
+			this.groupBox2.Controls.Add(this.btnCalc);
+			this.groupBox2.Controls.Add(this.btnArchivate);
+			this.groupBox2.Controls.Add(this.btnSumMinus);
+			this.groupBox2.Controls.Add(this.btnEdit);
+			this.groupBox2.Controls.Add(this.btnEntryHistory);
+			this.groupBox2.Controls.Add(this.btnSumPlus);
 			this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.groupBox2.ForeColor = System.Drawing.Color.White;
 			this.groupBox2.Location = new System.Drawing.Point(16, 113);
@@ -191,113 +238,120 @@ namespace FundTracking
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Выбранная задача";
 			// 
-			// button7
+			// btnCalc
 			// 
-			this.button7.BackColor = System.Drawing.Color.Transparent;
-			this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button7.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-			this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-			this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button7.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button7.ForeColor = System.Drawing.Color.White;
-			this.button7.Location = new System.Drawing.Point(149, 142);
-			this.button7.Margin = new System.Windows.Forms.Padding(4);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(121, 39);
-			this.button7.TabIndex = 10;
-			this.button7.Text = "Управление суммой";
-			this.button7.UseVisualStyleBackColor = false;
+			this.btnCalc.BackColor = System.Drawing.Color.Transparent;
+			this.btnCalc.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnCalc.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+			this.btnCalc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+			this.btnCalc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+			this.btnCalc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCalc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnCalc.ForeColor = System.Drawing.Color.White;
+			this.btnCalc.Location = new System.Drawing.Point(149, 142);
+			this.btnCalc.Margin = new System.Windows.Forms.Padding(4);
+			this.btnCalc.Name = "btnCalc";
+			this.btnCalc.Size = new System.Drawing.Size(121, 39);
+			this.btnCalc.TabIndex = 10;
+			this.btnCalc.Text = "Калькулятор";
+			this.btnCalc.UseVisualStyleBackColor = false;
+			this.btnCalc.Click += new System.EventHandler(this.BtnCalcClick);
 			// 
-			// button4
+			// btnArchivate
 			// 
-			this.button4.BackColor = System.Drawing.Color.Transparent;
-			this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button4.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-			this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-			this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button4.ForeColor = System.Drawing.Color.White;
-			this.button4.Location = new System.Drawing.Point(20, 142);
-			this.button4.Margin = new System.Windows.Forms.Padding(4);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(121, 39);
-			this.button4.TabIndex = 10;
-			this.button4.Text = "Завершить";
-			this.button4.UseVisualStyleBackColor = false;
+			this.btnArchivate.BackColor = System.Drawing.Color.Transparent;
+			this.btnArchivate.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnArchivate.Enabled = false;
+			this.btnArchivate.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+			this.btnArchivate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+			this.btnArchivate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+			this.btnArchivate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnArchivate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnArchivate.ForeColor = System.Drawing.Color.White;
+			this.btnArchivate.Location = new System.Drawing.Point(20, 142);
+			this.btnArchivate.Margin = new System.Windows.Forms.Padding(4);
+			this.btnArchivate.Name = "btnArchivate";
+			this.btnArchivate.Size = new System.Drawing.Size(121, 39);
+			this.btnArchivate.TabIndex = 10;
+			this.btnArchivate.Text = "Завершить";
+			this.btnArchivate.UseVisualStyleBackColor = false;
+			this.btnArchivate.Click += new System.EventHandler(this.BtnArchivateClick);
 			// 
-			// button3
+			// btnSumMinus
 			// 
-			this.button3.BackColor = System.Drawing.Color.Transparent;
-			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button3.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-			this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button3.ForeColor = System.Drawing.Color.White;
-			this.button3.Location = new System.Drawing.Point(20, 95);
-			this.button3.Margin = new System.Windows.Forms.Padding(4);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(121, 39);
-			this.button3.TabIndex = 10;
-			this.button3.Text = "Вычесть";
-			this.button3.UseVisualStyleBackColor = false;
+			this.btnSumMinus.BackColor = System.Drawing.Color.Transparent;
+			this.btnSumMinus.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnSumMinus.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+			this.btnSumMinus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+			this.btnSumMinus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+			this.btnSumMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSumMinus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnSumMinus.ForeColor = System.Drawing.Color.White;
+			this.btnSumMinus.Location = new System.Drawing.Point(20, 95);
+			this.btnSumMinus.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSumMinus.Name = "btnSumMinus";
+			this.btnSumMinus.Size = new System.Drawing.Size(121, 39);
+			this.btnSumMinus.TabIndex = 10;
+			this.btnSumMinus.Text = "Вычесть";
+			this.btnSumMinus.UseVisualStyleBackColor = false;
+			this.btnSumMinus.Click += new System.EventHandler(this.BtnSumMinusClick);
 			// 
-			// button6
+			// btnEdit
 			// 
-			this.button6.BackColor = System.Drawing.Color.Transparent;
-			this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button6.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-			this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-			this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Location = new System.Drawing.Point(149, 95);
-			this.button6.Margin = new System.Windows.Forms.Padding(4);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(121, 39);
-			this.button6.TabIndex = 9;
-			this.button6.Text = "Изменить";
-			this.button6.UseVisualStyleBackColor = false;
+			this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+			this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+			this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+			this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+			this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnEdit.ForeColor = System.Drawing.Color.White;
+			this.btnEdit.Location = new System.Drawing.Point(149, 95);
+			this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+			this.btnEdit.Name = "btnEdit";
+			this.btnEdit.Size = new System.Drawing.Size(121, 39);
+			this.btnEdit.TabIndex = 9;
+			this.btnEdit.Text = "Изменить";
+			this.btnEdit.UseVisualStyleBackColor = false;
+			this.btnEdit.Click += new System.EventHandler(this.BtnEditClick);
 			// 
-			// button5
+			// btnEntryHistory
 			// 
-			this.button5.BackColor = System.Drawing.Color.Transparent;
-			this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button5.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-			this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-			this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button5.ForeColor = System.Drawing.Color.White;
-			this.button5.Location = new System.Drawing.Point(149, 48);
-			this.button5.Margin = new System.Windows.Forms.Padding(4);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(121, 39);
-			this.button5.TabIndex = 9;
-			this.button5.Text = "История";
-			this.button5.UseVisualStyleBackColor = false;
+			this.btnEntryHistory.BackColor = System.Drawing.Color.Transparent;
+			this.btnEntryHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnEntryHistory.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+			this.btnEntryHistory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+			this.btnEntryHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+			this.btnEntryHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEntryHistory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnEntryHistory.ForeColor = System.Drawing.Color.White;
+			this.btnEntryHistory.Location = new System.Drawing.Point(149, 48);
+			this.btnEntryHistory.Margin = new System.Windows.Forms.Padding(4);
+			this.btnEntryHistory.Name = "btnEntryHistory";
+			this.btnEntryHistory.Size = new System.Drawing.Size(121, 39);
+			this.btnEntryHistory.TabIndex = 9;
+			this.btnEntryHistory.Text = "История";
+			this.btnEntryHistory.UseVisualStyleBackColor = false;
+			this.btnEntryHistory.Click += new System.EventHandler(this.BtnEntryHistoryClick);
 			// 
-			// button1
+			// btnSumPlus
 			// 
-			this.button1.BackColor = System.Drawing.Color.Transparent;
-			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-			this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(20, 48);
-			this.button1.Margin = new System.Windows.Forms.Padding(4);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(121, 39);
-			this.button1.TabIndex = 9;
-			this.button1.Text = "Пополнить";
-			this.button1.UseVisualStyleBackColor = false;
+			this.btnSumPlus.BackColor = System.Drawing.Color.Transparent;
+			this.btnSumPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnSumPlus.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+			this.btnSumPlus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+			this.btnSumPlus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+			this.btnSumPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSumPlus.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.btnSumPlus.ForeColor = System.Drawing.Color.White;
+			this.btnSumPlus.Location = new System.Drawing.Point(20, 48);
+			this.btnSumPlus.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSumPlus.Name = "btnSumPlus";
+			this.btnSumPlus.Size = new System.Drawing.Size(121, 39);
+			this.btnSumPlus.TabIndex = 9;
+			this.btnSumPlus.Text = "Пополнить";
+			this.btnSumPlus.UseVisualStyleBackColor = false;
+			this.btnSumPlus.Click += new System.EventHandler(this.BtnSumPlusClick);
 			// 
 			// groupBox1
 			// 
@@ -356,6 +410,7 @@ namespace FundTracking
 			this.tabControl1.Controls.Add(this.tab_payments);
 			this.tabControl1.Controls.Add(this.tab_targets);
 			this.tabControl1.Controls.Add(this.tab_investments);
+			this.tabControl1.Controls.Add(this.tab_archive);
 			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabControl1.Location = new System.Drawing.Point(323, 41);
 			this.tabControl1.Name = "tabControl1";
@@ -389,37 +444,18 @@ namespace FundTracking
 			this.DGV_allEntrys.RowTemplate.Height = 24;
 			this.DGV_allEntrys.Size = new System.Drawing.Size(730, 527);
 			this.DGV_allEntrys.TabIndex = 9;
+			this.DGV_allEntrys.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_allEntrysCellMouseDoubleClick);
 			// 
 			// tab_payments
 			// 
 			this.tab_payments.Controls.Add(this.label1);
-			this.tab_payments.Location = new System.Drawing.Point(4, 32);
+			this.tab_payments.Location = new System.Drawing.Point(4, 25);
 			this.tab_payments.Name = "tab_payments";
 			this.tab_payments.Padding = new System.Windows.Forms.Padding(3);
-			this.tab_payments.Size = new System.Drawing.Size(736, 533);
+			this.tab_payments.Size = new System.Drawing.Size(736, 540);
 			this.tab_payments.TabIndex = 1;
 			this.tab_payments.Text = "Платежи";
 			this.tab_payments.UseVisualStyleBackColor = true;
-			// 
-			// tab_targets
-			// 
-			this.tab_targets.Controls.Add(this.label2);
-			this.tab_targets.Location = new System.Drawing.Point(4, 32);
-			this.tab_targets.Name = "tab_targets";
-			this.tab_targets.Size = new System.Drawing.Size(736, 533);
-			this.tab_targets.TabIndex = 2;
-			this.tab_targets.Text = "Цели";
-			this.tab_targets.UseVisualStyleBackColor = true;
-			// 
-			// tab_investments
-			// 
-			this.tab_investments.Controls.Add(this.label3);
-			this.tab_investments.Location = new System.Drawing.Point(4, 32);
-			this.tab_investments.Name = "tab_investments";
-			this.tab_investments.Size = new System.Drawing.Size(736, 533);
-			this.tab_investments.TabIndex = 3;
-			this.tab_investments.Text = "Инвестиции";
-			this.tab_investments.UseVisualStyleBackColor = true;
 			// 
 			// label1
 			// 
@@ -427,9 +463,19 @@ namespace FundTracking
 			this.label1.Location = new System.Drawing.Point(3, 3);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(730, 23);
-			this.label1.TabIndex = 0;
+			this.label1.TabIndex = 2;
 			this.label1.Text = "только чтение";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// tab_targets
+			// 
+			this.tab_targets.Controls.Add(this.label2);
+			this.tab_targets.Location = new System.Drawing.Point(4, 25);
+			this.tab_targets.Name = "tab_targets";
+			this.tab_targets.Size = new System.Drawing.Size(736, 540);
+			this.tab_targets.TabIndex = 2;
+			this.tab_targets.Text = "Цели";
+			this.tab_targets.UseVisualStyleBackColor = true;
 			// 
 			// label2
 			// 
@@ -437,9 +483,19 @@ namespace FundTracking
 			this.label2.Location = new System.Drawing.Point(0, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(736, 23);
-			this.label2.TabIndex = 1;
+			this.label2.TabIndex = 2;
 			this.label2.Text = "только чтение";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// tab_investments
+			// 
+			this.tab_investments.Controls.Add(this.label3);
+			this.tab_investments.Location = new System.Drawing.Point(4, 25);
+			this.tab_investments.Name = "tab_investments";
+			this.tab_investments.Size = new System.Drawing.Size(736, 540);
+			this.tab_investments.TabIndex = 3;
+			this.tab_investments.Text = "Инвестиции";
+			this.tab_investments.UseVisualStyleBackColor = true;
 			// 
 			// label3
 			// 
@@ -450,6 +506,26 @@ namespace FundTracking
 			this.label3.TabIndex = 1;
 			this.label3.Text = "только чтение";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// tab_archive
+			// 
+			this.tab_archive.Controls.Add(this.label6);
+			this.tab_archive.Location = new System.Drawing.Point(4, 25);
+			this.tab_archive.Name = "tab_archive";
+			this.tab_archive.Size = new System.Drawing.Size(736, 540);
+			this.tab_archive.TabIndex = 4;
+			this.tab_archive.Text = "Архив";
+			this.tab_archive.UseVisualStyleBackColor = true;
+			// 
+			// label6
+			// 
+			this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label6.Location = new System.Drawing.Point(0, 0);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(736, 23);
+			this.label6.TabIndex = 2;
+			this.label6.Text = "только чтение";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// MainForm
 			// 
@@ -480,18 +556,25 @@ namespace FundTracking
 			this.tab_payments.ResumeLayout(false);
 			this.tab_targets.ResumeLayout(false);
 			this.tab_investments.ResumeLayout(false);
+			this.tab_archive.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataView_main)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button btnCalc;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.TabPage tab_archive;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label entry_deadlineInfo;
+		private System.Windows.Forms.Label entry_needAmount;
+		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button7;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button btnEdit;
+		private System.Windows.Forms.Button btnEntryHistory;
 		private System.Windows.Forms.RichTextBox entry_commentBox;
 		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button btnArchivate;
 		private System.Data.DataView dataView_main;
 		private System.Windows.Forms.TabPage tab_investments;
 		private System.Windows.Forms.TabPage tab_targets;
@@ -500,8 +583,8 @@ namespace FundTracking
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.Button btnDelete;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button btnSumPlus;
+		private System.Windows.Forms.Button btnSumMinus;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.DataGridView DGV_allEntrys;
 		private System.Windows.Forms.Panel panel1;

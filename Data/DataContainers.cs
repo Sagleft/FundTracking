@@ -26,6 +26,14 @@ namespace FundTracking.Data
 		Investment
 	}
 	
+	public enum BalanceType: int {
+		[Description("Пополнение")]
+		Income,
+		
+		[Description("Вычет")]
+		Outcome
+	}
+	
 	/// <summary>
 	/// <param name="title">название</param>
 	/// <param name="need_amount">сумма, денежных единиц</param>
@@ -47,5 +55,7 @@ namespace FundTracking.Data
 	public class BalanceData {
 		public decimal amount = 0;
 		public string comment = "";
+		public BalanceType type = BalanceType.Income;
+		public DateTime event_date = DateTime.Now;
 	}
 }
