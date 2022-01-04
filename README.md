@@ -16,10 +16,8 @@ cd FundTracking
 
 далее вам потребуется SharpDevelop >=4.4.2 и .NET 4.5
 
-### Разработчику на бутерброды
+---
 
-![qr code](http://sagleft.ru/donate_mfc.gif)
+![image](https://github.com/Sagleft/Sagleft/raw/master/image.png)
 
-Mv7vb6eWskJd2xtfB1U97CfKEZxML65Me4
-
-(MFCoin)
+### :globe_with_meridians: [Telegram канал](https://t.me/+VIvd8j6xvm9iMzhi)
